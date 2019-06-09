@@ -1,0 +1,72 @@
+body {
+  background: black;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.game {
+  width: 100vw;
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  background: pink;
+  max-height: 100vh;
+  max-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0; /* vertical center */
+  left: 0;
+  right: 0; /* horizontal center */
+}
+
+.game .scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game .scene .character {
+  position: absolute;
+}
+
+.game .scene .character img {
+  height: 100%;
+}
+
+.game .scene .exit {
+  position: absolute;
+  display: block;
+  background: #ffffff33;
+}
+
+.game .scene .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000066;
+  z-index: 100;
+}
+
+.game .scene .overlay .dialog {
+  position: fixed;
+  background: white;
+  left: 50%;
+  opacity: 1;
+  bottom: 20%;
+  width: 20%;
+  margin-left: -10%;
+}
