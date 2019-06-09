@@ -15,7 +15,23 @@ export default [
       {
         id: 1,
         text: "Hello, can I help you?",
-        options: ["Yes", "No", "Maybe"]
+        options: [
+          { text: "Yes", target: 2 },
+          { text: "No", target: null },
+          { text: "Maybe", target: 2 }
+        ]
+      },
+      {
+        id: 2,
+        text: "So, what do you need?",
+        options: [
+          { text: "I don't know...", target: 3 },
+          { text: "Nothing...", target: null }
+        ]
+      },
+      {
+        id: 3,
+        text: "Ok, whatever."
       }
     ]
   }
