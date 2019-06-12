@@ -19,6 +19,8 @@ Eras might include:
 
 ## Game Systems
 
+NOTE: Right now you have to manually navigate to one of the scenes to start, for example: /scene/crossroads
+
 Notably, the game will not include a moving character. It will instead be more similar to Nancy Drew or Shadowgate. This mostly to not get stuck implementing pathing and such.
 
 Instead I want to focus on good puzzles, solid UX and well structured code.

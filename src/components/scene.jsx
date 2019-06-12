@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 class Scene extends Component {
   state = {};
 
-  renderExits() {
-    var scene = scenes.find(x => x.id === this.props.match.params.id);
-
+  renderExits(scene) {
     if (!scene.exits) {
       return null;
     }
@@ -29,9 +27,7 @@ class Scene extends Component {
     });
   }
 
-  renderCharacters() {
-    var scene = scenes.find(x => x.id === this.props.match.params.id);
-
+  renderCharacters(scene) {
     if (!scene.characters) {
       return null;
     }
@@ -56,9 +52,9 @@ class Scene extends Component {
 
     return (
       <div className={`scene ${id}`} style={style}>
-        {this.renderExits()}
+        {this.renderExits(scene)}
 
-        {this.renderCharacters()}
+        {this.renderCharacters(scene)}
       </div>
     );
   }

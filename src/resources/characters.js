@@ -18,7 +18,7 @@ export default [
         options: [
           { text: "Yes", target: 2 },
           { text: "No", target: null },
-          { text: "Maybe", target: 2 }
+          { text: "Nevermind", target: 3 }
         ]
       },
       {
