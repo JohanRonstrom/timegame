@@ -6,6 +6,28 @@ import { Link } from "react-router-dom";
 class Scene extends Component {
   state = {};
 
+  render() {
+    const { id } = this.props.match.params;
+    var scene = scenes.find(x => x.id === id);
+
+    if (!scene) {
+      console.error("Scene does not exist:", id);
+      return null;
+    }
+
+    var style = {
+      backgroundImage: `url(${scene.background})`
+    };
+
+    return (
+      <div className={`scene ${id}`} style={style}>
+        {this.renderExits(scene)}
+
+        {this.renderCharacters(scene)}
+      </div>
+    );
+  }
+
   renderExits(scene) {
     if (!scene.exits) {
       return null;
@@ -35,28 +57,6 @@ class Scene extends Component {
     return scene.characters.map(character => (
       <Character id={character} key={character} />
     ));
-  }
-
-  render() {
-    const { id } = this.props.match.params;
-    var scene = scenes.find(x => x.id === id);
-
-    if (!scene) {
-      console.error("Scene does not exist:", id);
-      return null;
-    }
-
-    var style = {
-      backgroundImage: `url(${scene.background})`
-    };
-
-    return (
-      <div className={`scene ${id}`} style={style}>
-        {this.renderExits(scene)}
-
-        {this.renderCharacters(scene)}
-      </div>
-    );
   }
 }
 

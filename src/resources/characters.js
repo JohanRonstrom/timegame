@@ -11,6 +11,8 @@ export default [
     },
     sprite:
       "https://images.vexels.com/media/users/3/151966/isolated/lists/f7d5b0521f65b5f48621f65596863ea5-sheperd-character-illustration.png",
+    portrait:
+      "https://www.pngkit.com/png/full/771-7715213_happy-haru-persona-5-character-portraits.png",
     dialog: [
       {
         id: 1,

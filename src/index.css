@@ -16,7 +16,7 @@ code {
 .game {
   width: 100vw;
   height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
-  background: pink;
+  background: white;
   max-height: 100vh;
   max-width: 177.78vh; /* 16/9 = 1.778 */
   margin: auto;
@@ -61,12 +61,42 @@ code {
   z-index: 100;
 }
 
-.game .scene .overlay .dialog {
+.game .scene .overlay .dialog-wrapper {
   position: fixed;
-  background: white;
   left: 50%;
-  opacity: 1;
   bottom: 20%;
-  width: 20%;
-  margin-left: -10%;
+  width: 90%;
+  margin-left: -45%;
+}
+
+.game .scene .overlay .dialog-wrapper .portrait-wrapper {
+  position: relative;
+}
+
+.game .scene .overlay .dialog-wrapper .portrait-wrapper .portrait {
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+}
+
+.game .scene .overlay .dialog-wrapper .portrait-wrapper .player-portrait {
+  left: 0;
+}
+
+.game .scene .overlay .dialog-wrapper .portrait-wrapper .character-portrait {
+  right: 0;
+}
+
+.game .scene .overlay .dialog-wrapper .dialog {
+  background: black;
+  color: white;
+  padding: 1em;
+}
+
+p {
+  margin: 0;
+}
+
+code span {
+  display: block;
 }
